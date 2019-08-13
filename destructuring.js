@@ -20,7 +20,7 @@ var carDetails = {
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
-
+var {color, make, model, year} = carDetails;
 //Code Here
 
 
@@ -35,7 +35,8 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj;
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +55,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+var totalPopulation = (obj) => {
+  const {utah, california, texas, arizona} = obj;
+  const total = utah + california + texas + arizona;
+  return total;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -68,7 +73,15 @@ function greeting( obj ) {
 */
 
 //Code Here
+var ingredients = (obj) => {
+  const {carb, fat, protein} = obj;
+  let arry = [];
+  arry.push(carb);
+  arry.push(fat);
+  arry.push(protein);
+  return arry;
 
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -86,6 +99,12 @@ function greeting( obj ) {
 */
 
 //Code Here
+var largeNumbers = (obj) => {
+  const {first, second, third} = obj;
+   
+  return Math.min(first, second, third);
+  }
+
 
 
 
@@ -98,5 +117,33 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+var numberGroups = (obj) => {
+  const {a, b, c} = obj;
+  if (Math.max(a.length, b.length, c.length) === a.length) {
+    return a;
+  }
+  if (Math.max(a.length, b.length, c.length) === b.length) {
+    return b;
+  }
+  else {
+    return c;
+  }
+  }
+
+  // function numberGroups ({a, b, c}) {
+  //   let numsArr = [a, b, c]
+  //   let longestArr = [];
+
+  //   for (let i = 0; i < numsArr.length; i++) {
+  //     if (numsArr[i].length > longestArr.length) {
+  //       longestArr = numsArr[i]
+  //     }
+  //   }
+  //   return longestArr;
+
+  // }
+
+  // numberGroups({a: [1, 2, 3], b: [99], c: [8, 9, 10, 11]})
 
 

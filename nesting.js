@@ -51,7 +51,19 @@ var employees = [
 */
 
 //Code Here
+let employeeUpdater = () => {
+  for (let i = 0; i < employees.length; i ++) {
+    if (employees[i].firstName === "Theo") {
+      employees.splice(i,1);
+    }
+    else if (employees[i].firstName === "Lorie") {
+      employees[i].department = "HR";
+    }
 
+    
+  }
+  return employees;
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -69,7 +81,10 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+function removeDuplicates() {
+var newArr = new Set(workplaceAccidents);
+return Array.from (newArr);
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -158,5 +173,19 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+
+let looper = (arr) => {
+  for (let i = 0; i < arr.length; i ++ ) {
+    for (let j = 0; j < arr[i].length; i ++) {
+if (arr[i][j] % 2 === 0) {
+   arr[i][j] = "even";
+}
+else {
+   arr[i][j] = "odd";
+}
+    }
+  }
+return arr;
+}
 
 
